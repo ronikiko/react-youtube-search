@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoDitel = ({video}) => {
 console.log(video)
-    //
+
     if( !video){
         return <div></div>
     }

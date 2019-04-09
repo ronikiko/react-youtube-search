@@ -27,17 +27,24 @@ class App extends React.Component {
     render(){
   
         return (
-            <div className="ui container">
-                <div className="ui segment">
-                    <SearchForm onRK={this.onFormSubmit} />
-                    <VideoDitel video={this.state.selectedVideo} />
-                    <VideoList 
-                        videos={this.state.videos}
-                        onVideoSelect={this.onVideoSelect}
-                        />
-                    Total images Found: {this.state.videos.length}
-                </div>          
-            </div>
+                <div className="ui container">
+                    <div className="ui segment">
+                        <SearchForm onRK={this.onFormSubmit} />
+                    <div className="ui grid">
+                        <div className="ten wide column">
+                             <VideoDitel video={this.state.selectedVideo} />
+                        </div>
+                        <div className="six wide column">
+                        <VideoList 
+                            videos={this.state.videos}
+                            onVideoSelect={this.onVideoSelect}
+                            />
+                        </div>
+                        Total images Found: {this.state.videos.length}
+                    </div> 
+                    </div>         
+                </div>
+           
         );
     }
 }
