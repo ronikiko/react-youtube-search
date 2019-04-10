@@ -7,8 +7,10 @@ const VideoItem = props => {
         onClick={ () => props.onVideoSelect(props.video)}
         className="item">
             <img 
+                key={props.video.id.videoId}
                 className="ui image"
-                src={props.video.snippet.thumbnails.default.url} alt={props.video.title} 
+                src={props.video.snippet.thumbnails.default.url} 
+                alt={props.video.title} 
             />
             <div className="ui content">
                 <div className="ui header">{props.video.snippet.title}</div>
