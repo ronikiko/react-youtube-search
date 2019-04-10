@@ -17,7 +17,7 @@ class App extends React.Component {
             q: msg
         }
     });
-    this.setState({videos: response.data.items})
+    this.setState({videos: response.data.items, selectedVideo: response.data.items[0]})
     }
    
     onVideoSelect = (video) => {
