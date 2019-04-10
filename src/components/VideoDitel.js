@@ -10,7 +10,7 @@ console.log(video)
     return (
         <div>
             <div className="ui embed">
-                <iframe  src={videoUrl} /> 
+                <iframe  title="video player" src={videoUrl} /> 
             </div>
             <div className="ui segment">
                 <h4 className="ui header">{video.snippet.title}</h4>

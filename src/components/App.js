@@ -30,15 +30,18 @@ class App extends React.Component {
                 <div className="ui container">
                     <div className="ui segment">
                         <SearchForm onRK={this.onFormSubmit} />
-                    <div className="ui grid">
+                    <div className = "ui grid"
+                    style = {{ height: 'auto'} } >
+                    <div className="ui row">
                         <div className="ten wide column">
                              <VideoDitel video={this.state.selectedVideo} />
                         </div>
-                        <div className="six wide column">
+                        <div className="six wide column" style={{height: '500px',overflow: 'auto'}}>
                         <VideoList 
                             videos={this.state.videos}
                             onVideoSelect={this.onVideoSelect}
                             />
+                        </div>
                         </div>
                         Total images Found: {this.state.videos.length}
                     </div> 
