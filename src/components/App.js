@@ -10,7 +10,9 @@ class App extends React.Component {
         videos: [],
         selectedVideo: null
     }
-
+    componentDidMount(){
+        this.onFormSubmit('git');
+    }
     onFormSubmit = async (msg) => {
     const response = await youtube.get('/search', {
         params: {
@@ -31,7 +33,7 @@ class App extends React.Component {
                     <div className="ui segment">
                         <SearchForm onRK={this.onFormSubmit} />
                     <div className = "ui grid"
-                    style = {{ height: 'auto'} } >
+                    style = {{ height: 'auto'}} >
                     <div className="ui row">
                         <div className="ten wide column">
                              <VideoDitel video={this.state.selectedVideo} />

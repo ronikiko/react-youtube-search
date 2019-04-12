@@ -3,8 +3,7 @@ import React from 'react';
 const VideoItem = props => {
    
     return (
-        <div 
-        onClick={ () => props.onVideoSelect(props.video)}
+        <div onClick={ () => props.onVideoSelect(props.video)}
         className="item">
             <img 
                 key={props.video.id.videoId}
